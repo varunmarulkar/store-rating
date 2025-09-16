@@ -7,7 +7,7 @@ const UpdatePasswordForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage(""); // Purana message hatane ke liye
+    setMessage(""); 
 
     if (!newPassword) {
       setMessage("Please enter a new password.");
@@ -17,7 +17,7 @@ const UpdatePasswordForm = () => {
     try {
       const response = await api.updateStoreOwnerPassword({ newPassword });
       setMessage(response.data.message);
-      setNewPassword(""); // Form ko clear karne ke liye
+      setNewPassword(""); 
     } catch (err) {
       setMessage("Failed to update password: " + (err.response?.data?.message || err.message));
     }

@@ -18,7 +18,7 @@ const ChangePasswordForm = ({ updatePasswordFunction }) => {
         }
 
         try {
-            // Use the function passed as a prop
+ 
             const response = await updatePasswordFunction({ newPassword });
             setMessage(response.data.message);
             setNewPassword("");

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../../api/api";
 import { FaStar } from 'react-icons/fa';
+import UpdatePasswordForm from './UpdatePasswordForm'; // Add this import
 
 const StoreOwnerDashboard = () => {
   const [dashboardData, setDashboardData] = useState(null);
@@ -10,12 +11,10 @@ const StoreOwnerDashboard = () => {
   useEffect(() => {
     const fetchDashboardData = async () => {
       try {
-        // Fetch the dashboard data from the backend
         const response = await api.getStoreOwnerDashboard();
         setDashboardData(response.data);
         setLoading(false);
       } catch (err) {
-        // Specific error handling for store not found
         if (err.response && err.response.status === 404) {
           setError("No store found for this owner. Please contact support.");
         } else {
@@ -25,7 +24,6 @@ const StoreOwnerDashboard = () => {
         console.error(err);
       }
     };
-
     fetchDashboardData();
   }, []);
 
@@ -37,7 +35,6 @@ const StoreOwnerDashboard = () => {
     return <div className="text-center mt-8 text-red-500">{error}</div>;
   }
 
-  // Check if dashboardData or store exists before trying to display it
   if (!dashboardData || !dashboardData.store) {
     return <div className="text-center mt-8 text-gray-500">No store data found for this owner.</div>;
   }
@@ -45,7 +42,6 @@ const StoreOwnerDashboard = () => {
   return (
     <div className="container mx-auto p-6 bg-gray-100 min-h-screen">
       <h1 className="text-3xl font-bold text-gray-800 mb-6">
-        {/* Use the correct path to the store name */}
         {dashboardData.store.name} Dashboard
       </h1>
 
@@ -96,6 +92,9 @@ const StoreOwnerDashboard = () => {
           <p className="text-gray-500">No ratings have been submitted for your store yet.</p>
         )}
       </div>
+
+      {/* Add the change password form here */}
+      <UpdatePasswordForm />
     </div>
   );
 };

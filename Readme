@@ -1,0 +1,45 @@
+//Project Title
+A short, one-sentence description of your project and what it does.
+
+//Technologies Used
+Frontend: React, Tailwind CSS
+
+Backend: Node.js, Express.js
+
+Database: MongoDB (I used MongoDB because I am more familiar and comfortable with it, which allowed me to develop the project more efficiently and deliver the features more quickly.)
+
+Authentication: Cookie-based sessions for secure and stateful user authentication.
+
+//Features
+List the main functionalities of your application.
+
+User Authentication: Secure login, signup, and logout for different roles (Admin, Store Owner, User).
+
+Role-Based Access Control: Restricts access to certain pages and features based on the user's role.
+
+Admin Dashboard: Allows admins to create new users and assign stores to them.
+
+Store Owner Dashboard: Enables store owners to view their store details and manage ratings.
+
+Password Management: Users can change their password after logging in.
+
+How to Run Locally
+Follow these steps to get the project running on your local machine.
+
+//Backend Setup
+Navigate to the backend directory: cd backend
+ Install dependencies: npm install
+
+Set up your MongoDB connection string in a .env file.
+MONGO_URI=your_mongodb_connection_string
+
+Run the server: npm start
+
+// Frontend Setup
+Navigate to the frontend directory: cd frontend
+
+Install dependencies: npm install
+
+Run the client: npm run dev
+
+Your application should now be running on http://localhost:5173 (or the port specified in your console).

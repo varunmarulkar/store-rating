@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import api from "../../api/api";
 import { FaStar } from 'react-icons/fa';
-import UpdatePasswordForm from './UpdatePasswordForm'; // Add this import
+import UpdatePasswordForm from './UpdatePasswordForm'; 
+
 
 const StoreOwnerDashboard = () => {
   const [dashboardData, setDashboardData] = useState(null);

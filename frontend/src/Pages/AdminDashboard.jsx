@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react";
 import api from "../api/api";
 import UserTable from "../Components/admin/UserTable";
 import StoreTable from "../Components/admin/StoreTable";
-// Remove CreateOwnerForm
 import AssignStoreForm from "../Components/admin/AssignStoreForm";
 import CreateUserForm from "../Components/admin/CreateUserForm";
+import UpdatePasswordForm from "../Components/store-owner/UpdatePasswordForm";
 
 const AdminDashboard = () => {
     const [stats, setStats] = useState({});
@@ -78,6 +78,11 @@ const AdminDashboard = () => {
             <div>
                 <h2 className="text-2xl font-bold mb-4">Stores List</h2>
                 <StoreTable stores={stores} />
+            </div>
+
+            <div>
+            <h2 className="text-2xl font-bold mb-4">Stores List</h2>
+            <UpdatePasswordForm />
             </div>
         </div>
     );

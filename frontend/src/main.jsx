@@ -10,8 +10,8 @@ import Login from './Pages/Login.jsx';
 import Signup from './Pages/Signup.jsx';
 import AdminDashboard from './Pages/AdminDashboard.jsx';
 import StoreOwnerDashboard from './Components/store-owner/StoreOwnerDashboard.jsx';
-import StoresPage from './Pages/StoresPage.jsx';
 import PrivateRoute from './Components/Common/PrivateRoute.jsx';
+import UserDashboard from './Components/user/UserDashboard.jsx';
 
 
 const router = createBrowserRouter([
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: '/',
-            element: <StoresPage />,
+            element: <UserDashboard />,
           },
         ],
       },

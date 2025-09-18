@@ -32,6 +32,9 @@ Navigate to the backend directory: cd backend
 
 Set up your MongoDB connection string in a .env file.
 MONGO_URI=your_mongodb_connection_string
+PORT=your_port_number
+JWT_SECRET=yout_jwt_secret
+
 
 Run the server: npm start
 
